@@ -1,4 +1,5 @@
 import { doctoken_backend } from "../../declarations/doctoken_backend";
+import { Principal } from "@dfinity/principal";
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -13,12 +14,12 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   button.setAttribute("disabled", true);
 
   // Interact with the Dip721NFT actor, calling the mintNFT method
-  const receipt = await doctoken_backend.mintNFT(name, author, description, checksum, link);
-
+  const response = await doctoken_backend.mintNFT(Principal.fromText(name), author, description, checksum, link);
+  console.log(response);
+  const receipt = response.Ok;
   button.removeAttribute("disabled");
 
   document.getElementById("receipt").innerText = `Token ID: ${receipt.token_id}, Transaction ID: ${receipt.id}`;
 
   return false;
 });
-

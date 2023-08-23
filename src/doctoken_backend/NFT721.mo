@@ -101,7 +101,7 @@ shared actor class Dip721NFT(custodian: Principal) {
     return n;
   };
 
- public func getNftByUser(user : Principal) : async Types.NftResult {
+ public func getLastNftByUser(user : Principal) : async Types.NftResult {
     let userNftOpt = findLast(allNfts, user);
     
     switch (userNftOpt) {
