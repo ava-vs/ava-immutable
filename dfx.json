@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "doctoken_backend": {
+      "main": "src/doctoken_backend/NFT721.mo",
+      "type": "motoko"
+    },
+    "doctoken_frontend": {
+      "dependencies": [
+        "doctoken_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/doctoken_frontend/src/index.html"
+      },
+      "source": [
+        "src/doctoken_frontend/assets",
+        "dist/doctoken_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
