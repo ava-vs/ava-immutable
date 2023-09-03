@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>aVa Doctoken</title>
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./start.css" />
+    <link type="text/css" rel="stylesheet" href="global.css" />
+    <link type="text/css" rel="stylesheet" href="start.css" />
     <link rel="icon" href="favicon.ico" />
     <link
       rel="stylesheet"
@@ -25,21 +25,21 @@
       <div class="menu">
         <div class="nft-group">
           <div class="nft2">
-            <button class="button" id="button">NFT</button>
+            <button class="button" id="nft">NFT</button>
           </div>
           <div class="nft2">
-            <button class="button" id="button1">dNFT</button>
+            <button class="button" id="dnft">dNFT</button>
           </div>
         </div>
         <div class="login1">
-          <button class="button2" id="button2">Login</button>
+          <button class="button2" id="login">Login</button>
         </div>
       </div>
       <div class="logo">
         <div class="frame-parent">
           <div class="group-wrapper">
             <div class="logo-wrapper">
-              <img class="logo-icon" alt="" src="../assets/logo.png" id="logo" />
+              <img class="logo-icon" alt="" src="logo.png" id="logo" />
             </div>
           </div>
           <div class="logotext-wrapper">
@@ -78,31 +78,31 @@
                 <div class="input-name-wrapper">
                   <div class="input-name">
                     <div class="input-wrapper">
-                      <input class="input" type="text" />
+                      <input id="name" class="input" type="text" />
                     </div>
                   </div>
                 </div>
                 <div class="input-name">
                   <div class="input-wrapper">
-                    <input class="input" type="text" />
+                    <input id="author" class="input" type="text" />
                   </div>
                 </div>
                 <div class="input-name">
                   <div class="input-wrapper">
-                    <input class="input" type="text" />
+                    <input id="description" class="input" type="text" />
                   </div>
                 </div>
                 <div class="input-name-container">
                   <div class="input-name">
                     <div class="input-wrapper">
-                      <input class="input" type="text" />
+                      <input id="checksum" class="input" type="text" />
                     </div>
                   </div>
                 </div>
                 <div class="input-name-container">
                   <div class="input-name">
                     <a class="link1">
-                      <input class="input" type="text" />
+                      <input id="link" class="input" type="text" />
                     </a>
                   </div>
                 </div>
@@ -110,48 +110,11 @@
             </div>
           </div>
           <div class="mint">
-            <button class="button3" id="submit">Mint NFT!</button>
+            <button type="submit" class="button3" id="submit">Mint NFT!</button>
           </div>
           <div><section id="receipt"></section>></div>
         </div>
       </div>
-    </div>
-
-    <!-- <script>
-      var button = document.getElementById("button");
-      if (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "http://nft_page";
-        });
-      }
-      
-      var button1 = document.getElementById("button1");
-      if (button1) {
-        button1.addEventListener("click", function () {
-          window.location.href = "http://dNFT_page";
-        });
-      }
-      
-      var button2 = document.getElementById("button2");
-      if (button2) {
-        button2.addEventListener("click", function () {
-          window.open("http://auth_page");
-        });
-      }
-      
-      var logo = document.getElementById("logo");
-      if (logo) {
-        logo.addEventListener("click", function () {
-          window.open("http://ava.capetown/en");
-        });
-      }
-      
-      var button3 = document.getElementById("button3");
-      if (button3) {
-        button3.addEventListener("click", function () {
-          window.location.href = "http://mintNFT";
-        });
-      }
-      </script> -->
+    </div>   
   </body>
 </html>

@@ -28,6 +28,41 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   // button.removeAttribute("disabled");
 
   // document.getElementById("receipt_ic").innerText = `Token ID: ${receipt_icrc.token_id}, Transaction ID: ${receipt_icrc.id}`;
-
+  
+  // var button = document.getElementById("nft");
+  // if (button) {
+  //   button.addEventListener("click", function () {
+  //     window.location.href = "http://nft_page";
+  //   });
+  // }
+  
+  // var button1 = document.getElementById("dnft");
+  // if (button1) {
+  //   button1.addEventListener("click", function () {
+  //     window.location.href = "http://dNFT_page";
+  //   });
+  // }
+  
+  // var button2 = document.getElementById("login");
+  // if (button2) {
+  //   button2.addEventListener("click", function () {
+  //     window.open("http://auth_page");
+  //   });
+  // }
+  
+  // var logo = document.getElementById("logo");
+  // if (logo) {
+  //   logo.addEventListener("click", function () {
+  //     window.open("http://ava.capetown/en");
+  //   });
+  // }
+  
+  // var button3 = document.getElementById("button3");
+  // if (button3) {
+  //   button3.addEventListener("click", function () {
+  //     window.location.href = "http://mintNFT";
+  //   });
+  // }
+ 
   return false;
 });
