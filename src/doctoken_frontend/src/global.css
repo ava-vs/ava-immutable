@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-bruno-ace: "Bruno Ace";
+    --font-red-hat-display: "Red Hat Display";
+    --font-red-hat-text: "Red Hat Text";
+  
+    /* font sizes */
+    --font-size-base: 16px;
+  
+    /* Colors */
+    --color-orangered: #ee4817;
+    --color-white: #fff;
+  
+    /* Gaps */
+    --gap-xl: 20px;
+  
+    /* Paddings */
+    --padding-3xs: 10px;
+    --padding-13xl: 32px;
+  }
+  

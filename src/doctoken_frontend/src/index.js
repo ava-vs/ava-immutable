@@ -21,5 +21,13 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
   document.getElementById("receipt").innerText = `Token ID: ${receipt.token_id}, Transaction ID: ${receipt.id}`;
 
+  // Interact with the ICRC actor, calling the mintNFT method
+  // const response_icrc = await icrc.mint(Principal.fromText(name), author, description, checksum, link);
+  // console.log(response);
+  // const receipt_icrc = response_icrc.Ok;
+  // button.removeAttribute("disabled");
+
+  // document.getElementById("receipt_ic").innerText = `Token ID: ${receipt_icrc.token_id}, Transaction ID: ${receipt_icrc.id}`;
+
   return false;
 });

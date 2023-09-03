@@ -1,0 +1,298 @@
+.button {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    font-size: var(--font-size-base);
+    font-family: var(--font-bruno-ace);
+    color: var(--color-orangered);
+    text-align: left;
+    display: inline-block;
+  }
+  .nft-group,
+  .nft2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .nft2 {
+    padding: var(--padding-3xs);
+    justify-content: center;
+  }
+  .nft-group {
+    justify-content: flex-end;
+    gap: var(--gap-xl);
+  }
+  .button2 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    font-size: var(--font-size-base);
+    font-family: var(--font-bruno-ace);
+    color: var(--color-orangered);
+    text-align: center;
+    display: inline-block;
+  }
+  .login1,
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .login1 {
+    padding: var(--padding-3xs) var(--padding-13xl);
+  }
+  .menu {
+    position: absolute;
+    top: calc(50% - 337px);
+    left: calc(50% + 253px);
+    flex-wrap: wrap;
+    gap: 70px;
+  }
+  .logo-icon,
+  .logo-wrapper {
+    position: absolute;
+    left: 0;
+    width: 60px;
+  }
+  .logo-icon {
+    top: -2.01px;
+    height: 68.46px;
+    cursor: pointer;
+  }
+  .logo-wrapper {
+    top: 0;
+    height: 58.5px;
+  }
+  .group-wrapper {
+    position: relative;
+    width: 59px;
+    height: 59px;
+  }
+  .ava,
+  .verification {
+    position: absolute;
+    height: 90.71%;
+    width: 85.67%;
+    top: 0;
+    left: 6.68%;
+    display: inline-block;
+  }
+  .verification {
+    top: 38.13px;
+    left: 0;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    font-family: var(--font-red-hat-text);
+    width: 113.69px;
+    height: 33.87px;
+  }
+  .logotext {
+    position: absolute;
+    height: 100%;
+    width: 93.96%;
+    top: 6.94%;
+    right: 13.48%;
+    bottom: -6.94%;
+    left: -7.44%;
+  }
+  .logotext-wrapper {
+    position: relative;
+    width: 121px;
+    height: 72px;
+  }
+  .frame-parent,
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .frame-parent {
+    padding: var(--padding-3xs) var(--padding-13xl);
+    align-items: center;
+  }
+  .logo {
+    position: absolute;
+    top: 33px;
+    left: 137px;
+    align-items: flex-start;
+  }
+  .h1 {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  .createnft {
+    box-shadow: 0 4px 4px rgba(238, 72, 23, 0.25);
+    height: 73px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  .text {
+    position: relative;
+    font-weight: 800;
+  }
+  .your-name,
+  .your-name-parent {
+    box-sizing: border-box;
+    display: flex;
+  }
+  .your-name {
+    width: 90px;
+    height: 40px;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    align-items: center;
+    justify-content: center;
+  }
+  .your-name-parent {
+    border-right: 1px solid var(--color-orangered);
+    width: 100px;
+    height: 277px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xl);
+  }
+  .input,
+  .input-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid var(--color-orangered);
+    box-sizing: border-box;
+  }
+  .input {
+    background-color: var(--color-white);
+  }
+  .input-wrapper {
+    box-shadow: 4px 4px 4px rgba(238, 72, 23, 0.25) inset;
+  }
+  .input-name {
+    position: relative;
+    width: 386px;
+    height: 40px;
+  }
+  .input-name-wrapper {
+    width: 386px;
+  }
+  .input-name-container,
+  .input-name-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .link1 {
+    text-decoration: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 4px 4px 4px rgba(238, 72, 23, 0.25) inset;
+    border: 2px solid var(--color-orangered);
+    box-sizing: border-box;
+  }
+  .input-block {
+    width: 386px;
+    flex-direction: column;
+    gap: var(--gap-xl);
+  }
+  .createnft-parent,
+  .frame-container,
+  .input-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .frame-container {
+    flex-direction: row;
+    gap: var(--gap-xl);
+    text-align: right;
+    font-size: var(--font-size-base);
+    font-family: var(--font-red-hat-display);
+  }
+  .createnft-parent {
+    width: 492px;
+    flex-direction: column;
+    gap: 37px;
+  }
+  .button3 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    font-size: var(--font-size-base);
+    font-family: var(--font-bruno-ace);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+  }
+  .center,
+  .frame-group,
+  .mint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mint {
+    border-radius: 4px;
+    background-color: var(--color-orangered);
+    box-shadow: 0 4px 4px rgba(238, 72, 23, 0.25);
+    border: 2px solid var(--color-white);
+    box-sizing: border-box;
+    width: 163px;
+    height: 44px;
+    flex-direction: row;
+    padding: 18px var(--padding-13xl);
+  }
+  .center,
+  .frame-group {
+    width: 506px;
+  }
+  .frame-group {
+    flex-direction: column;
+    gap: 62px;
+  }
+  .center {
+    position: absolute;
+    top: calc(50% - 206px);
+    left: calc(50% - 253px);
+    height: 492px;
+    flex-direction: row;
+    font-size: 32px;
+    font-family: var(--font-red-hat-text);
+  }
+  .nft1 {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    background-image: url(../assets/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+    font-size: 36px;
+    color: var(--color-orangered);
+    font-family: var(--font-bruno-ace);
+  }
+  
