@@ -66,9 +66,7 @@ module {
   public type MetadataDesc = [MetadataPart];
 
   public type MetadataPart = {
-    purpose: MetadataPurpose;
     key_val_data: [MetadataKeyVal];
-    data: Blob;
   };
 
   public type MetadataPurpose = {

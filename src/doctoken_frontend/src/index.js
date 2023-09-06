@@ -60,8 +60,26 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
 
 
-  // document.getElementById("resultCard").innerText =receipt;
-  // document.getElementById("receipt").innerText = `Token ID: ${receipt.token_id}, Transaction ID: ${receipt.id}`;
+  const card = `
+    <div class="card">
+      <img src="1.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Author: ${name}</h5>
+        <p class="card-text">Link: ${link}</p>
+        <p class="card-text">Token_id: ${receipt.token_id}</p>        
+        </p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("receipt").innerHTML = card;
+
+/*<p class="card-text">
+{ <small class="text-muted">
+Author: ${receipt.author}<br>
+Token ID: ${receipt.token_id}<br>            
+Link: ${receipt.link}
+</small>   */
 
   // Interact with the ICRC actor, calling the mintNFT method
   // const response_icrc = await icrc.mint(Principal.fromText(name), author, description, checksum, link);

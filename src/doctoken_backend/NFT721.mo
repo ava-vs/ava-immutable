@@ -38,7 +38,6 @@ shared actor class Dip721NFT(custodian: Principal) {
 
     public func createMetadata(author: Text, description : Text, hashsum : Text, link: Text) : async [Types.MetadataPart] {
     let metadataPart: Types.MetadataPart = {
-      purpose = #Preview;
       key_val_data = [{
         key = "URL";
         val = #LinkContent(link)
@@ -59,19 +58,17 @@ shared actor class Dip721NFT(custodian: Principal) {
         key = "HASHSUM";
         val = #TextContent(hashsum)
       }];
-      data = Text.encodeUtf8(link); 
     };
     return [metadataPart];
   };
 
-  public func mintNFT(to: Principal, author: Text, description : Text, hashsum : Text, link: Text) : async Types.MintReceipt {
-    let metadata = await createMetadata(author, description, hashsum, link);
+  public func mintNFT(to: Principal, author: Text, description : Text, img : Text, link: Text) : async Types.MintReceipt {
+    let metadata = await createMetadata(author, description, img, link);
     let newId = Nat64.fromNat(List.size(allNfts));
     let nft: Types.Nft = {
       owner = to;
       id = newId;
       metadata = metadata;
-      tokenType = GLOBAL_TOKEN_SYMBOL;
     };
     allNfts := List.push(nft, allNfts);
     return #Ok({
