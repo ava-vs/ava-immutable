@@ -17,9 +17,60 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const response = await doctoken_backend.mintNFT(Principal.fromText(name), author, description, checksum, link);
   console.log(response);
   const receipt = response.Ok;
+  // Map receipt fields to card content
+const name_nft = receipt.name; 
+const author_nft = receipt.author;
+const description_nft = receipt.description;
+const checksum_nft = receipt.checksum;  
+const link_nft = receipt.link;
   button.removeAttribute("disabled");
+  const resultCard = document.getElementById('resultCard');
 
-  document.getElementById("receipt").innerText = `Token ID: ${receipt.token_id}, Transaction ID: ${receipt.id}`;
+  // After minting, display results in card
+  resultCard.innerHTML = `
+    <div class="container">
+      <div class="card">
+        
+        <!-- Card header -->
+        <div class="card-head">
+          <img src="logo.svg" class="card-logo">
+          <div class="product-detail">
+            <h2>Minted NFT</h2>
+          </div>
+          <span class="back-text">aVa</span>  
+        </div>
+        
+        <!-- Card body -->
+        <div class="card-body">
+
+          <!-- NFT name -->
+          <div class="product-desc">
+            <span class="product-title">
+              ${name_nft}
+              <span class="badge">
+                New
+              </span>
+            </span>
+            
+            <div class="product-caption">
+            ${author_nft}
+          </div>
+          <a href="${link_nft}" target="_blank" class="product-link">
+          Link
+        </a>
+       
+           
+        
+        </div>
+      </div>  
+    </div>
+  `;
+
+
+
+
+  // document.getElementById("resultCard").innerText =receipt;
+  // document.getElementById("receipt").innerText = `Token ID: ${receipt.token_id}, Transaction ID: ${receipt.id}`;
 
   // Interact with the ICRC actor, calling the mintNFT method
   // const response_icrc = await icrc.mint(Principal.fromText(name), author, description, checksum, link);

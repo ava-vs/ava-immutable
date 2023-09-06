@@ -48,8 +48,8 @@
   }
   .menu {
     position: absolute;
-    top: calc(50% - 337px);
-    left: calc(50% + 253px);
+    top: 50px;
+    right: 50px;
     flex-wrap: wrap;
     gap: 70px;
   }
@@ -129,7 +129,6 @@
     font-family: inherit;
   }
   .createnft {
-    box-shadow: 0 4px 4px rgba(238, 72, 23, 0.25);
     height: 73px;
     display: flex;
     flex-direction: row;
