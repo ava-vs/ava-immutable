@@ -74,9 +74,13 @@ shared actor class Dip721NFT(custodian: Principal) {
       tokenType = GLOBAL_TOKEN_SYMBOL;
     };
     allNfts := List.push(nft, allNfts);
+
     return #Ok({
-      token_id = newId;
+      author = author;
       id = transactionId;
+      image = "";
+      token_id = newId;      
+      link = link;   
     });
   };
 
@@ -92,8 +96,11 @@ shared actor class Dip721NFT(custodian: Principal) {
     };
     allNfts := List.push(nft, allNfts);
     return #Ok({
-      token_id = newId;
+      author = Principal.toText(caller);
       id = transactionId;
+      image = "";
+      token_id = newId;      
+      link = link;   
     });
   };
 

@@ -1,3 +1,65 @@
+.card {
+  max-height: 100%;
+  overflow-y: auto;
+  margin: 20px auto; 
+  width: 300px;
+  padding: 20px;
+  border: 2px solid var(--color-orangered);
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1); 
+  background-color: white; 
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+.card-img-top{  
+  max-height: 25%;
+  border: 1px solid #eee;
+  transition: transform 0.2s;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  margin-bottom: 0.5em;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  margin-bottom: 1em;  
+}
+
+img {
+  max-width: 50vw;
+  max-height: 25vw;
+  display: block;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  flex-flow: row wrap;
+  max-width: 40vw;
+  margin: auto;
+  align-items: baseline;
+}
+
+button[type="submit"] {
+  padding: 5px 20px;
+  margin: 10px auto;
+  float: right;
+}
+
+
 .button {
     cursor: pointer;
     border: 0;
@@ -48,8 +110,8 @@
   }
   .menu {
     position: absolute;
-    top: calc(50% - 337px);
-    left: calc(50% + 253px);
+    top: 50px;
+    right: 50px;
     flex-wrap: wrap;
     gap: 70px;
   }
@@ -129,7 +191,7 @@
     font-family: inherit;
   }
   .createnft {
-    box-shadow: 0 4px 4px rgba(238, 72, 23, 0.25);
+    /* box-shadow: 0 4px 4px rgba(238, 72, 23, 0.25); */
     height: 73px;
     display: flex;
     flex-direction: row;
@@ -142,29 +204,7 @@
     position: relative;
     font-weight: 800;
   }
-  .your-name,
-  .your-name-parent {
-    box-sizing: border-box;
-    display: flex;
-  }
-  .your-name {
-    width: 90px;
-    height: 40px;
-    flex-direction: row;
-    padding: var(--padding-3xs);
-    align-items: center;
-    justify-content: center;
-  }
-  .your-name-parent {
-    border-right: 1px solid var(--color-orangered);
-    width: 100px;
-    height: 277px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-xl);
-  }
-  .input,
+    .input,
   .input-wrapper {
     position: absolute;
     height: 100%;
@@ -284,9 +324,9 @@
   .nft1 {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 1200px;
     overflow: hidden;
-    background-image: url(../assets/back.png);
+    background-image: url(back.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;

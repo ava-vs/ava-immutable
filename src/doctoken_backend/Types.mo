@@ -98,6 +98,9 @@ module {
   public type MintReceiptPart = {
     token_id: TokenId;
     id: Nat;
+    link: Text;
+    author: Text;
+    image: Text;
   };
 
   public type ReputationBalance = {
