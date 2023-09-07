@@ -1,26 +1,26 @@
-# aVa DIP-721 dNFT Canister
+# aVa DIP-721 NFT Canister
 
-This canister implements the Dynamic NFT (Non-Fungible Token) DIP-721 standard on the [Internet Computer](https://github.com/dfinity/ic) as part of the [aVa project](https://github.com/ava-vs/verification).
+This canister implements the NFT (Non-Fungible Token) DIP-721 standard on the [Internet Computer](https://github.com/dfinity/ic) as part of the [aVa project](https://github.com/ava-vs/verification).
 
 ## Features
 
-- Mint dNFTs
+- Mint NFTs
 - Metadata creation from link
-- Fetch owned dNFTs
-- Get dNFT minting and updating history 
+- Fetch owned NFTs
+- Get NFT minting and updating history 
 
 ## Usage
 
 The main methods provided are:
 
-- `mintNFT` - Mint a new dNFT
-- `mintNFTWithLinkWithoutTo` - Mint an dNFT from a link without specifying owner
-- `getLastNftByUser` - Get the last dNFT minted by a user
+- `mintNFT` - Mint a new NFT
+- `mintNFTWithLinkWithoutTo` - Mint an NFT from a link without specifying owner
+- `getLastNftByUser` - Get the last NFT minted by a user
 
 The canister also exposes queries to:
 
-- `getAllNft` - Get all minted dNFTs
-- `getNftHistoryByUser` - Get minting history of a user's dNFTs
+- `getAllNft` - Get all minted NFTs
+- `getNftHistoryByUser` - Get minting history of a user's NFTs
 
 ## Technical Details
 
