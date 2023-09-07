@@ -77,6 +77,9 @@ shared actor class Dip721NFT(custodian: Principal) {
     return #Ok({
       token_id = newId;
       id = transactionId;
+      owner = Principal.toText(nft.owner);
+      link = link;
+      image = "url://new_link";
     });
   };
 
@@ -94,6 +97,9 @@ shared actor class Dip721NFT(custodian: Principal) {
     return #Ok({
       token_id = newId;
       id = transactionId;
+      owner = Principal.toText(caller);
+      link = link;
+      image = "url://new_link";
     });
   };
 

@@ -11,7 +11,7 @@
   
   .container {
     width: 280px;
-    height: 500px;
+    height: 800px;
     margin: 30px auto;
   }
   
@@ -22,7 +22,7 @@
   
   .card-head {
     position: relative;
-    height: 252px;
+    height: 152px;
     background: #fa782e;
     /* Old browsers */
     background: -moz-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
@@ -37,14 +37,14 @@
   }
   
   .card-logo {
-    width: 55px;
+    width: 100px;
     margin: 20px;
   }
   
   .product-img {
     position: absolute;
     left: 0;
-    margin-top: -16px;
+    margin-top: 50px;
     margin-left: 50px;
   }
   
@@ -234,9 +234,7 @@
   .product-price b {
     margin-left: 5px;
   }
-  
-  
-  
+
   .yt
   {
     position: fixed;

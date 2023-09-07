@@ -17,12 +17,12 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const response = await doctoken_backend.mintNFT(Principal.fromText(name), author, description, checksum, link);
   console.log(response);
   const receipt = response.Ok;
-  // Map receipt fields to card content
-const name_nft = receipt.name; 
-const author_nft = receipt.author;
-const description_nft = receipt.description;
-const checksum_nft = receipt.checksum;  
-const link_nft = receipt.link;
+  const name_nft = receipt.owner; 
+  const author_nft = receipt.owner;
+  // const description_nft = receipt.description;
+  const tokenId = receipt.token_id;  
+  const link_nft = receipt.link;
+  const repo = "repo.jpg";
   button.removeAttribute("disabled");
   const resultCard = document.getElementById('resultCard');
 
@@ -30,37 +30,28 @@ const link_nft = receipt.link;
   resultCard.innerHTML = `
     <div class="container">
       <div class="card">
-        
-        <!-- Card header -->
         <div class="card-head">
-          <img src="logo.svg" class="card-logo">
+          <img src=${repo} class="card-logo">
           <div class="product-detail">
             <h2>Minted NFT</h2>
           </div>
           <span class="back-text">aVa</span>  
-        </div>
-        
+        </div>        
         <!-- Card body -->
         <div class="card-body">
-
           <!-- NFT name -->
           <div class="product-desc">
-            <span class="product-title">
-              ${name_nft}
+            <span class="product-title">ID: ${tokenId}
               <span class="badge">
                 New
               </span>
-            </span>
-            
+            </span>            
             <div class="product-caption">
             ${author_nft}
           </div>
           <a href="${link_nft}" target="_blank" class="product-link">
           Link
-        </a>
-       
-           
-        
+        </a>     
         </div>
       </div>  
     </div>
@@ -79,6 +70,41 @@ const link_nft = receipt.link;
   // button.removeAttribute("disabled");
 
   // document.getElementById("receipt_ic").innerText = `Token ID: ${receipt_icrc.token_id}, Transaction ID: ${receipt_icrc.id}`;
-
+  
+  // var button = document.getElementById("nft");
+  // if (button) {
+  //   button.addEventListener("click", function () {
+  //     window.location.href = "http://nft_page";
+  //   });
+  // }
+  
+  // var button1 = document.getElementById("dnft");
+  // if (button1) {
+  //   button1.addEventListener("click", function () {
+  //     window.location.href = "http://dNFT_page";
+  //   });
+  // }
+  
+  // var button2 = document.getElementById("login");
+  // if (button2) {
+  //   button2.addEventListener("click", function () {
+  //     window.open("http://auth_page");
+  //   });
+  // }
+  
+  // var logo = document.getElementById("logo");
+  // if (logo) {
+  //   logo.addEventListener("click", function () {
+  //     window.open("http://ava.capetown/en");
+  //   });
+  // }
+  
+  // var button3 = document.getElementById("button3");
+  // if (button3) {
+  //   button3.addEventListener("click", function () {
+  //     window.location.href = "http://mintNFT";
+  //   });
+  // }
+ 
   return false;
 });
