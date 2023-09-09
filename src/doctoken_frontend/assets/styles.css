@@ -103,13 +103,15 @@ header {
 label {
   font-weight: bold;
   color: var(--primary-color);
+  align-items: end;
 }
 
 input[type="text"] {
-  flex-grow: 1;
+  flex-grow: 0;
   margin-left: 20px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
+  width: 300px;
 }
 
 button[type="submit"]{
