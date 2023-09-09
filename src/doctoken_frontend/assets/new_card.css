@@ -14,6 +14,7 @@
   overflow: hidden;
   background-color: white;
   position: relative; 
+  margin-right: 5px;
 }
 
 .card::after {
@@ -93,6 +94,12 @@
 
 .ava-button:hover {
   background-color: #c83d0e;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
 }
 
 .update-button {

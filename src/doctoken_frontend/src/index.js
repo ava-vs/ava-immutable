@@ -21,6 +21,9 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   if (link.value === "") {
     linkField.value = "http://ava.captown/en";
   }
+  if (image.value === "") {
+    image.value = "1.jpg";
+  }
 
   button.setAttribute("disabled", true);
 
@@ -29,7 +32,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   console.log(response);
   const receipt = response.Ok;
   const owner_nft = receipt.owner; 
-  // const description_nft = receipt.description;
   button.removeAttribute("disabled");
 
   // After minting, display results in card
@@ -37,10 +39,11 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
   const card = document.createElement('div');
   card.classList.add('card');
+  const imageview = image.value;
   card.innerHTML = `
     
       <div class="card-image">
-        <img src="1.jpg" alt="img"> 
+        <img src=${imageview} alt="img"> 
       </div>
       <div class="card-content">
         <h1 class="card-title">Minted NFT</h1>
@@ -51,7 +54,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
           </div>
           <div class="info-item">
             <span class="info-label">Owner:</span>
-            <span class="info-value">${receipt.owner}</span>
+            <span class="info-value">${owner_nft}</span>
           </div>
           <div class="info-item">
             <span class="info-label">Link:</span>
@@ -63,41 +66,13 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   `;
   
   document.getElementById('result').appendChild(card);
-
-  var buttonNft = document.getElementById("nft-link");
-  if (buttonNft) {
-    button.addEventListener("click", function () {
-      window.open = "http://127.0.0.1:8000/?canisterId=be2us-64aaa-aaaaa-qaabq-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai";
-    });
-  };
-  
-  // var button1 = document.getElementById("dnft");
-  // if (button1) {
-  //   button1.addEventListener("click", function () {
-  //     window.location.href = "http://dNFT_page";
-  //   });
-  // }
-  
-  // var button2 = document.getElementById("login");
-  // if (button2) {
-  //   button2.addEventListener("click", function () {
-  //     window.open("http://auth_page");
-  //   });
-  // }
-  
-  // var logo = document.getElementById("logo");
-  // if (logo) {
-  //   logo.addEventListener("click", function () {
-  //     window.open("http://ava.capetown/en");
-  //   });
-  // }
-  
-  // var button3 = document.getElementById("button3");
-  // if (button3) {
-  //   button3.addEventListener("click", function () {
-  //     window.location.href = "http://mintNFT";
-  //   });
-  // }
  
   return false;
 });
+
+var buttonNft = document.getElementById("nftlink");
+if (buttonNft) {
+  buttonNft.addEventListener("click", function () {
+    window.open = "http://127.0.0.1:8000/?canisterId=be2us-64aaa-aaaaa-qaabq-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai";
+  });
+}; 
