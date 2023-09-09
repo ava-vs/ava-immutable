@@ -5,96 +5,71 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const button = e.target.querySelector("button");
 
-  const name = document.getElementById("name").value.toString();
-  const author = document.getElementById("author").value.toString();
+  const author = document.getElementById("principal").value.toString();
   const description = document.getElementById("description").value.toString();
-  const checksum = document.getElementById("checksum").value.toString();
+  const checksum = document.getElementById("image").value.toString();
   const link = document.getElementById("link").value.toString();
+
+  
+  // Set default values from placeholders if fields are empty
+  if (author.value === "") {
+    principalField.value = "aaaaa-aa";
+  }
+  if (description.value === "") {
+    descriptionField.value = "New Document NFT (aVa Doctoken project)";
+  }
+  if (link.value === "") {
+    linkField.value = "http://ava.captown/en";
+  }
 
   button.setAttribute("disabled", true);
 
   // Interact with the Dip721NFT actor, calling the mintNFT method
-  const response = await doctoken_backend.mintNFT(Principal.fromText(name), author, description, checksum, link);
+  const response = await doctoken_backend.mintNFT(Principal.fromText(author), author, description, checksum, link);
   console.log(response);
   const receipt = response.Ok;
-  const name_nft = receipt.owner; 
-  const author_nft = receipt.owner;
+  const owner_nft = receipt.owner; 
   // const description_nft = receipt.description;
-  const tokenId = receipt.token_id;  
-  const link_nft = receipt.link;
-  const repo = "repo.jpg";
   button.removeAttribute("disabled");
-  const resultCard = document.getElementById('resultCard');
 
   // After minting, display results in card
-  resultCard.innerHTML = `
-    <div class="container">
-      <div class="card">
-        <div class="card-head">
-          <img src=${repo} class="card-logo">
-          <div class="product-detail">
-            <h2>Minted NFT</h2>
-          </div>
-          <span class="back-text">aVa</span>  
-        </div>        
-        <!-- Card body -->
-        <div class="card-body">
-          <!-- NFT name -->
-          <div class="product-desc">
-            <span class="product-title">ID: ${tokenId}
-              <span class="badge">
-                New
-              </span>
-            </span>            
-            <div class="product-caption">
-            ${author_nft}
-          </div>
-          <a href="${link_nft}" target="_blank" class="product-link">
-          Link
-        </a>     
-        </div>
-      </div>  
-    </div>
-  `;
+  document.getElementById("resultcontainer").innerText = `Your aVa Document NFT:\n\n`;
 
-
-
-
-  const card = `
-    <div class="card">
-      <img src="1.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Author: ${name}</h5>
-        <p class="card-text">Link: ${link}</p>
-        <p class="card-text">Token_id: ${receipt.token_id}</p>        
-        </p>
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.innerHTML = `
+    
+      <div class="card-image">
+        <img src="1.jpg" alt="img"> 
       </div>
-    </div>
+      <div class="card-content">
+        <h1 class="card-title">Minted NFT</h1>
+        <div class="card-info">
+          <div class="info-item">
+            <span class="info-label">Token ID:</span>
+            <span class="info-value">${receipt.token_id}</span> 
+          </div>
+          <div class="info-item">
+            <span class="info-label">Owner:</span>
+            <span class="info-value">${receipt.owner}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Link:</span>
+            <span class="info-value" id="dip-link">${receipt.link}</span>
+          </div>
+        </div>
+        <a href="http://ava.capetown/en" target="_blank"><button class="ava-button">aVa</button></a>
+      </div>
   `;
-
-  document.getElementById("receipt").innerHTML = card;
-
-/*<p class="card-text">
-{ <small class="text-muted">
-Author: ${receipt.author}<br>
-Token ID: ${receipt.token_id}<br>            
-Link: ${receipt.link}
-</small>   */
-
-  // Interact with the ICRC actor, calling the mintNFT method
-  // const response_icrc = await icrc.mint(Principal.fromText(name), author, description, checksum, link);
-  // console.log(response);
-  // const receipt_icrc = response_icrc.Ok;
-  // button.removeAttribute("disabled");
-
-  // document.getElementById("receipt_ic").innerText = `Token ID: ${receipt_icrc.token_id}, Transaction ID: ${receipt_icrc.id}`;
   
-  // var button = document.getElementById("nft");
-  // if (button) {
-  //   button.addEventListener("click", function () {
-  //     window.location.href = "http://nft_page";
-  //   });
-  // }
+  document.getElementById('result').appendChild(card);
+
+  var buttonNft = document.getElementById("nft-link");
+  if (buttonNft) {
+    button.addEventListener("click", function () {
+      window.open = "http://127.0.0.1:8000/?canisterId=be2us-64aaa-aaaaa-qaabq-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai";
+    });
+  };
   
   // var button1 = document.getElementById("dnft");
   // if (button1) {
