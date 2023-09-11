@@ -35,9 +35,8 @@ The canister interfaces with the Internet Computer blockchain for persistence.
 
 Potential future improvements:
 
-- Access control
+- Add Asset canister
 - Additional metadata standards
-- Upgradable canister
 
 ## Running the project locally
 
